@@ -21,10 +21,12 @@
   <div class="container">
     <div class="weather-app">
       <form class="searchbar" id="search-city">
-        <input type="text" placeholder="Search for a city" class="search__input" id="search-input" autocomplete="off"
-          autofocus="on" required />
-        <input type="submit" class="btn btn-primary " value="Search" id="go"></Input>
-        <input type="button" class="btn btn-primary current" value="Current Location" id="current-city-button"></input>
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+          <input type="text" class="form-control" id="search-input" autocomplete="off" placeholder="Search for a city"
+            autofocus="off" required />
+          <input type="submit" class="btn btn-primary" id="go" value="Search">
+          <input type="button" class="btn btn-secondary" id="current-city-button" value="Current Location" />
+        </div>
       </form>
       <div class="row">
         <div class="col-6">

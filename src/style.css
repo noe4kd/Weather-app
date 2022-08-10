@@ -16,21 +16,24 @@ body {
 form {
   margin-top: 10px;
   margin-left: 15px;
+  max-width: 600px;
 }
 
-.search__input {
-  border-radius: 4px;
-  border: #8f6eb876;
-  padding: 6px 6px;
+.form-control {
+  border-style: solid;
+  border-width: thin;
+  border-color: rgb(76, 76, 142);
+
 }
 
 .btn-primary {
   background: rgb(193, 193, 243);
   border: rgb(86, 86, 137);
-  display: inline-flex;
-  margin-top: -5px;
-  margin-left: 1px;
   font-weight: bold;
+  font-weight: bold;
+  border-style: solid;
+  border-width: thin;
+  border-color: rgb(76, 76, 142);
 }
 
 .btn-primary:hover {
@@ -39,8 +42,19 @@ form {
   background: rgb(147, 147, 236) 1%;
 }
 
-.btn-primary.current {
-  margin-left: 0px;
+.btn-secondary {
+  background: rgb(193, 193, 243);
+  border: rgb(86, 86, 137);
+  font-weight: bold;
+  border-style: solid;
+  border-width: thin;
+  border-color: rgb(76, 76, 142);
+}
+
+.btn-secondary:hover {
+  font-weight: bold;
+  color: rgb(76, 76, 142);
+  background: rgb(147, 147, 236) 1%;
 }
 
 ul {
@@ -175,7 +189,7 @@ h5 {
   margin: 1px;
   display: inline-flex;
   border: 1px solid rgb(76, 76, 142);
-  background: linear-gradient(359.3deg, rgb(246, 246, 255) 1%, rgba(223, 223, 223, 0) 100%);
+  background: linear-gradient(359.3deg, rgb(250, 249, 237) 20%, rgba(223, 223, 223, 0) 100%);
 }
 
 .fa-sun {
