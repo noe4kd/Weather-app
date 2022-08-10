@@ -1,4 +1,4 @@
-.container {
+.weather-app {
   padding: 3px 0px;
   margin: 30px auto;
   border-radius: 10px;
@@ -7,7 +7,7 @@
   background: radial-gradient(circle at 10% 20%,
       rgb(255, 246, 236) 39.5%,
       rgba(100, 46, 122, 0.23) 100.2%);
-  width: 55%;
+  max-width: 700px;
 }
 
 form {

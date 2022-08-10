@@ -16,11 +16,11 @@
 <body>
 
   <div class="container">
-    <div class="heading">
+    <div class="weather-app">
       <form class="searchbar" id="search-city">
         <input type="text" placeholder="Search for a city" class="search__input" id="search-input" autocomplete="off"
           autofocus="on" required />
-        <input type="submit" class="btn btn-primary " id="go"></Input>
+        <input type="submit" class="btn btn-primary " value="Search" id="go"></Input>
         <input type="button" class="btn btn-primary current" value="Current Location" id="current-city-button"></input>
       </form>
 
@@ -42,107 +42,106 @@
             <ul />
         </spann>
       </h4>
+
+      <br />
+
+      <section class="forecast-long">
+        <div class="col-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 id="today"></h4>
+              <div class="indicator_weather_symbol">
+                <i class="fa-regular fa-sun"></i>
+              </div>
+              <hr />
+              <div class="temperature" id="currentTemperature">
+                <spann class="minimumTemp" id="minimumTemperature"></spann>
+                <spann class="maximumTemp" id="maximumTemperature"></spann>
+              </div>
+              <div class="indicator_weather_bottom">
+                <i class="fa-solid fa-droplet bottom-left"></i>
+                <spann class="bottom-text-left" id="p1"></spann>
+                </spann>
+                <i class="fa-solid fa-wind bottom-right"></i>
+                <spann class="bottom-text-right" id="p2"></spann>
+                </spann>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h4 id="tomorrow"></h4>
+              <div class="indicator_weather_symbol">
+                <i class="fa-solid fa-cloud-sun"></i>
+              </div>
+              <hr />
+              <div class="temperature" id="currentTemperature">
+                <spann class="minimumTemp" id="minimumTemperature">00° |</spann>
+                <spann class="maximumTemp" id="maximumTemperature">00°</spann>
+              </div>
+              <div class="indicator_weather_bottom">
+                <i class="fa-solid fa-droplet bottom-left"></i>
+                <spann class="bottom-text-left" id="p1">0 mm </spann>
+                </spann>
+                <i class="fa-solid fa-wind bottom-right"></i>
+                <spann class="bottom-text-right" id="p2">4 m/s </spann>
+                </spann>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h4 id="day-after"></h4>
+              <div class="indicator_weather_symbol">
+                <i class="fa-regular fa-sun"></i>
+              </div>
+              <hr />
+              <div class="temperature" id="currentTemperature">
+                <spann class="minimumTemp" id="minimumTemperature">00° |</spann>
+                <spann class="maximumTemp" id="maximumTemperature">00°</spann>
+              </div>
+              <div class="indicator_weather_bottom">
+                <i class="fa-solid fa-droplet bottom-left"></i>
+                <spann class="bottom-text-left" id="p1">0 mm </spann>
+                </spann>
+                <i class="fa-solid fa-wind bottom-right"></i>
+                <spann class="bottom-text-right" id="p2">0 m/s </spann>
+                </spann>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h4 id="day-after-after"></h4>
+              <div class="indicator_weather_symbol">
+                <i class="fa-regular fa-sun"></i>
+              </div>
+              <hr />
+              <div class="temperature" id="currentTemperature">
+                <spann class="minimumTemp" id="minimumTemperature">00° |</spann>
+                <spann class="maximumTemp" id="maximumTemperature">00°</spann>
+              </div>
+              <div class="indicator_weather_bottom">
+                <i class="fa-solid fa-droplet bottom-left"></i>
+                <spann class="bottom-text-left" id="p1">0 mm </spann>
+                </spann>
+                <i class="fa-solid fa-wind bottom-right"></i>
+                <spann class="bottom-text-right" id="p2">0 m/s </spann>
+                </spann>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <small>
+        <a href="https://github.com/noe4kd/Weather-app" target="_blank"> Open-source code</a>, by Noelia Fourcade
+      </small>
+      <p class="greetingUser">Have a great day!</p>
     </div>
-
-    <br />
-
-    <section class="forecast-long">
-      <div class="col-4">
-        <div class="card">
-          <div class="card-body">
-            <h4 id="today"></h4>
-            <div class="indicator_weather_symbol">
-              <i class="fa-regular fa-sun"></i>
-            </div>
-            <hr />
-            <div class="temperature" id="currentTemperature">
-              <spann class="minimumTemp" id="minimumTemperature"></spann>
-              <spann class="maximumTemp" id="maximumTemperature"></spann>
-            </div>
-            <div class="indicator_weather_bottom">
-              <i class="fa-solid fa-droplet bottom-left"></i>
-              <spann class="bottom-text-left" id="p1"></spann>
-              </spann>
-              <i class="fa-solid fa-wind bottom-right"></i>
-              <spann class="bottom-text-right" id="p2"></spann>
-              </spann>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-body">
-            <h4 id="tomorrow"></h4>
-            <div class="indicator_weather_symbol">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <hr />
-            <div class="temperature" id="currentTemperature">
-              <spann class="minimumTemp" id="minimumTemperature">00° |</spann>
-              <spann class="maximumTemp" id="maximumTemperature">00°</spann>
-            </div>
-            <div class="indicator_weather_bottom">
-              <i class="fa-solid fa-droplet bottom-left"></i>
-              <spann class="bottom-text-left" id="p1">0 mm </spann>
-              </spann>
-              <i class="fa-solid fa-wind bottom-right"></i>
-              <spann class="bottom-text-right" id="p2">4 m/s </spann>
-              </spann>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-body">
-            <h4 id="day-after"></h4>
-            <div class="indicator_weather_symbol">
-              <i class="fa-regular fa-sun"></i>
-            </div>
-            <hr />
-            <div class="temperature" id="currentTemperature">
-              <spann class="minimumTemp" id="minimumTemperature">00° |</spann>
-              <spann class="maximumTemp" id="maximumTemperature">00°</spann>
-            </div>
-            <div class="indicator_weather_bottom">
-              <i class="fa-solid fa-droplet bottom-left"></i>
-              <spann class="bottom-text-left" id="p1">0 mm </spann>
-              </spann>
-              <i class="fa-solid fa-wind bottom-right"></i>
-              <spann class="bottom-text-right" id="p2">0 m/s </spann>
-              </spann>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-body">
-            <h4 id="day-after-after"></h4>
-            <div class="indicator_weather_symbol">
-              <i class="fa-regular fa-sun"></i>
-            </div>
-            <hr />
-            <div class="temperature" id="currentTemperature">
-              <spann class="minimumTemp" id="minimumTemperature">00° |</spann>
-              <spann class="maximumTemp" id="maximumTemperature">00°</spann>
-            </div>
-            <div class="indicator_weather_bottom">
-              <i class="fa-solid fa-droplet bottom-left"></i>
-              <spann class="bottom-text-left" id="p1">0 mm </spann>
-              </spann>
-              <i class="fa-solid fa-wind bottom-right"></i>
-              <spann class="bottom-text-right" id="p2">0 m/s </spann>
-              </spann>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <small>
-      <a href="https://github.com/noe4kd/Weather-app" target="_blank"> Open-source code</a>, by Noelia Fourcade
-    </small>
-    <p class="greetingUser">Have a great day!</p>
-
   </div>
 </body>
 <script src="src/index.js"></script>
