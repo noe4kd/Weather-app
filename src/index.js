@@ -36,7 +36,30 @@ secondDay.innerHTML = `day date.${month}`;
 thirdDay.innerHTML = `day date.${month}`;
 fourthDay.innerHTML = `day date.${month}`;
 
-//
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temp");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+let celsiusTemperature = null;
 
 function showTemperature(response) {
   let currentTemperature = document.querySelector("#current-temp");
@@ -51,6 +74,8 @@ function showTemperature(response) {
   let currentMinTemperature = document.querySelector("#minimumTemperature");
   let currentMaxTemperature = document.querySelector("#maximumTemperature");
   let iconElement = document.querySelector("#icon");
+
+  celsiusTemperature = response.data.main.temp;
 
   currentTemperature.innerHTML = `${Math.round(response.data.main.temp)}`;
   temperatureDescription.innerHTML = `${response.data.weather[0].description}`;
