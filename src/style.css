@@ -9,7 +9,7 @@ body {
   border: solid rgb(76, 76, 142);
   box-sizing: border-box;
   background: linear-gradient(359.3deg, rgb(197, 196, 252) 1.5%, rgba(187, 187, 187, 0) 60%);
-  max-width: 700px;
+  max-width: 750px;
   box-shadow: 5px 5px 2px 1px rgba(119, 119, 127, 0.2);
 }
 
