@@ -43,38 +43,39 @@ function showTemperature(response) {
   let temperatureDescription = document.querySelector(
     "#temperature-description"
   );
-  currentTemperature.innerHTML = `${Math.round(response.data.main.temp)}`;
-  temperatureDescription.innerHTML = `${response.data.weather[0].description}`;
-
   let currentThermalSensation = document.querySelector(
     "#currentThermalSensation"
   );
+  let currentHumidity = document.querySelector("#currentHumidity");
+  let currentWind = document.querySelector("#currentWind");
+  let currentMinTemperature = document.querySelector("#minimumTemperature");
+  let currentMaxTemperature = document.querySelector("#maximumTemperature");
+  let iconElement = document.querySelector("#icon");
+
+  currentTemperature.innerHTML = `${Math.round(response.data.main.temp)}`;
+  temperatureDescription.innerHTML = `${response.data.weather[0].description}`;
   currentThermalSensation.innerHTML = `${Math.round(
     response.data.main.feels_like
   )}°`;
-
-  let currentHumidity = document.querySelector("#currentHumidity");
   currentHumidity.innerHTML = `${Math.round(response.data.main.humidity)}%`;
-
-  let currentWind = document.querySelector("#currentWind");
   currentWind.innerHTML = `${response.data.wind.speed} m/s`;
-
-  let currentMinTemperature = document.querySelector("#minimumTemperature");
   currentMinTemperature.innerHTML = `${Math.round(
     response.data.main.temp_min
   )}° |`;
-
-  let currentMaxTemperature = document.querySelector("#maximumTemperature");
   currentMaxTemperature.innerHTML = `${Math.round(
     response.data.main.temp_max
   )}°`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   let currentHumidityBottom = document.querySelector("#p1");
+  let currentWindBottom = document.querySelector("#p2");
   currentHumidityBottom.innerHTML = `${Math.round(
     response.data.main.humidity
   )} %`;
-
-  let currentWindBottom = document.querySelector("#p2");
   currentWindBottom.innerHTML = `${response.data.wind.speed} m/s`;
 }
 

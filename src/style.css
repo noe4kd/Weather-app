@@ -8,9 +8,7 @@ body {
   border-radius: 10px;
   border: solid rgb(76, 76, 142);
   box-sizing: border-box;
-  background: radial-gradient(circle at 10% 20%,
-      rgb(255, 246, 236) 39.5%,
-      rgba(100, 46, 122, 0.23) 100.2%);
+  background: linear-gradient(359.3deg, rgb(197, 196, 252) 1.5%, rgba(187, 187, 187, 0) 60%);
   max-width: 700px;
   box-shadow: 5px 5px 2px 1px rgba(119, 119, 127, 0.2);
 }
@@ -177,7 +175,7 @@ h5 {
   margin: 1px;
   display: inline-flex;
   border: 1px solid rgb(76, 76, 142);
-  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  background: linear-gradient(359.3deg, rgb(246, 246, 255) 1%, rgba(223, 223, 223, 0) 100%);
 }
 
 .fa-sun {
