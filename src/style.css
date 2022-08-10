@@ -76,6 +76,10 @@ li {
     "Lucida Sans", Arial, sans-serif;
 }
 
+.description:first-letter {
+  text-transform: capitalize;
+}
+
 .current-temperature {
   margin-top: 15px;
   margin-bottom: 0px;

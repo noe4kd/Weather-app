@@ -39,43 +39,43 @@ fourthDay.innerHTML = `day date.${month}`;
 //
 
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#current-temp");
   let temperatureDescription = document.querySelector(
     "#temperature-description"
   );
-  currentTemperature.innerHTML = `${temperature}`;
+  currentTemperature.innerHTML = `${Math.round(response.data.main.temp)}`;
   temperatureDescription.innerHTML = `${response.data.weather[0].description}`;
 
-  let thermalSensation = Math.round(response.data.main.feels_like);
   let currentThermalSensation = document.querySelector(
     "#currentThermalSensation"
   );
-  currentThermalSensation.innerHTML = `${thermalSensation}°`;
+  currentThermalSensation.innerHTML = `${Math.round(
+    response.data.main.feels_like
+  )}°`;
 
-  let humidity = Math.round(response.data.main.humidity);
   let currentHumidity = document.querySelector("#currentHumidity");
-  currentHumidity.innerHTML = `${humidity}%`;
+  currentHumidity.innerHTML = `${Math.round(response.data.main.humidity)}%`;
 
-  let wind = response.data.wind.speed;
   let currentWind = document.querySelector("#currentWind");
-  currentWind.innerHTML = `${wind} m/s`;
+  currentWind.innerHTML = `${response.data.wind.speed} m/s`;
 
-  let minTemperature = Math.round(response.data.main.temp_min);
   let currentMinTemperature = document.querySelector("#minimumTemperature");
-  currentMinTemperature.innerHTML = `${minTemperature}° |`;
+  currentMinTemperature.innerHTML = `${Math.round(
+    response.data.main.temp_min
+  )}° |`;
 
-  let maxTemperature = Math.round(response.data.main.temp_max);
   let currentMaxTemperature = document.querySelector("#maximumTemperature");
-  currentMaxTemperature.innerHTML = `${maxTemperature}°`;
+  currentMaxTemperature.innerHTML = `${Math.round(
+    response.data.main.temp_max
+  )}°`;
 
-  let humidityBottom = Math.round(response.data.main.humidity);
   let currentHumidityBottom = document.querySelector("#p1");
-  currentHumidityBottom.innerHTML = `${humidityBottom} %`;
+  currentHumidityBottom.innerHTML = `${Math.round(
+    response.data.main.humidity
+  )} %`;
 
-  let windBottom = response.data.wind.speed;
   let currentWindBottom = document.querySelector("#p2");
-  currentWindBottom.innerHTML = `${windBottom} m/s`;
+  currentWindBottom.innerHTML = `${response.data.wind.speed} m/s`;
 }
 
 let city = "Funchal";
