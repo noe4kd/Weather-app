@@ -44,7 +44,7 @@ function showTemperature(response) {
   let temperatureDescription = document.querySelector(
     "#temperature-description"
   );
-  currentTemperature.innerHTML = `${temperature}°`;
+  currentTemperature.innerHTML = `${temperature}`;
   temperatureDescription.innerHTML = `${response.data.weather[0].description}`;
 
   let thermalSensation = Math.round(response.data.main.feels_like);
@@ -107,7 +107,7 @@ function showCurrentLocationWeather(response) {
   displayCity.innerHTML = `${currentLocationCity}`;
 
   let displayTemp = document.querySelector("#current-temp");
-  displayTemp.innerHTML = `${currentTemp}°`;
+  displayTemp.innerHTML = `${currentTemp}`;
 }
 
 function showCurrentLocation(position) {
