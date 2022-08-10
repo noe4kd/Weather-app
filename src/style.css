@@ -8,6 +8,7 @@
       rgb(255, 246, 236) 39.5%,
       rgba(100, 46, 122, 0.23) 100.2%);
   max-width: 700px;
+  box-shadow: 5px 5px 2px 1px rgba(119, 119, 127, 0.2);
 }
 
 form {
