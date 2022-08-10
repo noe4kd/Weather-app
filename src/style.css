@@ -189,7 +189,7 @@ h5 {
   margin: 1px;
   display: inline-flex;
   border: 1px solid rgb(76, 76, 142);
-  background: linear-gradient(359.3deg, rgb(250, 249, 237) 20%, rgba(223, 223, 223, 0) 100%);
+  background: white;
 }
 
 .fa-sun {
