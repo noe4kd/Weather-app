@@ -26,6 +26,71 @@ if (minutes < 10) {
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = `${day} ${hours}:${minutes}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="col-4">`;
+
+  forecast.forEach(function (forecastDay) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="card">
+            <div class="card-body">
+              <h4 id="today">${formatDay(forecastDay.dt)}</h4>
+              <div class="indicator_weather_symbol">
+                <img src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png" alt="clear" class="weather-bottom" id="icon-bottom" />
+              </div>
+              <hr />
+              <div class="temperature" id="currentTemperature">
+                <spann class="minimumTemp" id="minimumTemperature">${
+                  forecastDay.temp.min
+                }° |</spann>
+                <spann class="maximumTemp" id="maximumTemperature">${
+                  forecastDay.temp.max
+                }°</spann>
+              </div>
+              <div class="indicator_weather_bottom">
+                <i class="fa-solid fa-droplet bottom-left"></i>
+                <spann class="bottom-text-left" id="p1"></spann>
+                </spann>
+                <i class="fa-solid fa-wind bottom-right"></i>
+                <spann class="bottom-text-right" id="p2"></spann>
+                </spann>
+              </div>
+            </div>
+          </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = `357f496043907e473ed70c8c25ecf66b`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temp");
@@ -77,13 +142,7 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  let currentHumidityBottom = document.querySelector("#p1");
-  let currentWindBottom = document.querySelector("#p2");
-  currentHumidityBottom.innerHTML = `${Math.round(
-    response.data.main.humidity
-  )} %`;
-  currentWindBottom.innerHTML = `${response.data.wind.speed} m/s`;
+  getForecast(response.data.coord);
 }
 
 let city = "Funchal";
@@ -116,8 +175,8 @@ function showCurrentLocationWeather(response) {
 }
 
 function showCurrentLocation(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
+  let latitude = position.coord.latitude;
+  let longitude = position.coord.longitude;
   let apiKey = `357f496043907e473ed70c8c25ecf66b`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCurrentLocationWeather);

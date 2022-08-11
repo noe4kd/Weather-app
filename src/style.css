@@ -205,22 +205,16 @@ h5 {
   background: white;
 }
 
-.fa-sun {
-  color: rgb(249, 190, 81);
-  font-size: 20px;
-}
-
-.fa-cloud-sun {
-  color: rgb(203, 203, 176);
-  font-size: 20px;
-}
-
 h4 {
   font-size: 16px;
 }
 
-.card.temperature {
+.temperature {
   font-size: 16px;
+}
+
+.minimumTemp {
+  opacity: 0.5;
 }
 
 .fa-droplet.bottom-left {
