@@ -26,16 +26,6 @@ if (minutes < 10) {
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = `${day} ${hours}:${minutes}`;
 
-let firstDay = document.querySelector("#today");
-let secondDay = document.querySelector("#tomorrow");
-let thirdDay = document.querySelector("#day-after");
-let fourthDay = document.querySelector("#day-after-after");
-
-firstDay.innerHTML = `${day} ${date}.${month}`;
-secondDay.innerHTML = `day date.${month}`;
-thirdDay.innerHTML = `day date.${month}`;
-fourthDay.innerHTML = `day date.${month}`;
-
 function showFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temp");
@@ -71,8 +61,6 @@ function showTemperature(response) {
   );
   let currentHumidity = document.querySelector("#currentHumidity");
   let currentWind = document.querySelector("#currentWind");
-  let currentMinTemperature = document.querySelector("#minimumTemperature");
-  let currentMaxTemperature = document.querySelector("#maximumTemperature");
   let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = response.data.main.temp;
@@ -83,13 +71,7 @@ function showTemperature(response) {
     response.data.main.feels_like
   )}°`;
   currentHumidity.innerHTML = `${Math.round(response.data.main.humidity)}%`;
-  currentWind.innerHTML = `${response.data.wind.speed} m/s`;
-  currentMinTemperature.innerHTML = `${Math.round(
-    response.data.main.temp_min
-  )}° |`;
-  currentMaxTemperature.innerHTML = `${Math.round(
-    response.data.main.temp_max
-  )}°`;
+  currentWind.innerHTML = `${Math.round(response.data.wind.speed)} m/s`;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -126,14 +108,11 @@ let citySearch = document.querySelector("#search-city");
 citySearch.addEventListener("submit", searchCity);
 
 function showCurrentLocationWeather(response) {
-  let currentLocationCity = response.data.name;
-  let currentTemp = Math.round(response.data.main.temp);
-
   let displayCity = document.querySelector("#current-place");
-  displayCity.innerHTML = `${currentLocationCity}`;
+  displayCity.innerHTML = `${response.data.name}`;
 
   let displayTemp = document.querySelector("#current-temp");
-  displayTemp.innerHTML = `${currentTemp}`;
+  displayTemp.innerHTML = `${Math.round(response.data.main.temp)}`;
 }
 
 function showCurrentLocation(position) {
