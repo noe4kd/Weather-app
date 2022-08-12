@@ -9,7 +9,7 @@ body {
   border: solid rgb(76, 76, 142);
   box-sizing: border-box;
   background: linear-gradient(359.3deg, rgb(197, 196, 252) 1.5%, rgba(187, 187, 187, 0) 60%);
-  max-width: 750px;
+  max-width: 6000px;
   box-shadow: 5px 5px 2px 1px rgba(119, 119, 127, 0.2);
 }
 
@@ -77,7 +77,7 @@ li {
   font-size: 25px;
 }
 
-.location:first-letter {
+.location:first-line {
   text-transform: capitalize;
 }
 
@@ -102,8 +102,8 @@ li {
 }
 
 .weather-temperature img {
-  margin-top: 40px;
-  margin-right: 250px;
+  margin-top: 30px;
+  margin-right: 230px;
   margin-bottom: -270px;
 }
 
@@ -200,13 +200,14 @@ h5 {
 .card {
   flex: 1 1 15rem;
   margin: 1px;
+  margin-bottom: 5px;
   display: inline-flex;
   border: 1px solid rgb(76, 76, 142);
   background: white;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .weather-bottom {
@@ -250,7 +251,7 @@ h4 {
 
 .codedBy {
   font-size: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: 15px;
 }
 

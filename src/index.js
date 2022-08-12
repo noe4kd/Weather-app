@@ -49,7 +49,7 @@ function displayForecast(response) {
   let forecastHTML = `<div class="col-4">`;
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 4) {
       forecastHTML =
         forecastHTML +
         `
@@ -124,6 +124,7 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
   getForecast(response.data.coord);
 }
 
