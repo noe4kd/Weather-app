@@ -209,6 +209,11 @@ h4 {
   font-size: 16px;
 }
 
+.weather-bottom {
+  margin-top: -15px;
+  margin-bottom: -20px;
+}
+
 .temperature {
   font-size: 16px;
 }
