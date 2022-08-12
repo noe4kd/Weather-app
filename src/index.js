@@ -42,6 +42,7 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
+  console.log(response.data.daily);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
@@ -71,10 +72,14 @@ function displayForecast(response) {
               </div>
               <div class="indicator_weather_bottom">
                 <i class="fa-solid fa-droplet bottom-left"></i>
-                <spann class="bottom-text-left" id="p1"></spann>
+                <spann class="bottom-text-left" id="p1">${Math.round(
+                  forecastDay.humidity
+                )}%</spann>
                 </spann>
                 <i class="fa-solid fa-wind bottom-right"></i>
-                <spann class="bottom-text-right" id="p2"></spann>
+                <spann class="bottom-text-right" id="p2">${Math.round(
+                  forecastDay.wind_speed
+                )}m/s</spann>
                 </spann>
               </div>
             </div>
