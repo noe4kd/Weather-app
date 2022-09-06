@@ -3,15 +3,7 @@ let now = new Date();
 let date = now.getDate();
 let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 let month = months[now.getMonth()];
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
 let day = days[now.getDay()];
 
 let hours = now.getHours();
@@ -29,15 +21,7 @@ currentTime.innerHTML = `${day} ${hours}:${minutes}`;
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
   return days[day];
 }
 
@@ -55,13 +39,12 @@ function displayForecast(response) {
         `
           <div class="card">
             <div class="card-body">
-              <h4 id="today">${formatDay(forecastDay.dt)}</h4>
-              <div class="indicator_weather_symbol">
+              <h4 class="day-week" id="today">${formatDay(forecastDay.dt)}</h4>
+              <div class="indicator_weather_symbol d-sm-block d-none">
                 <img src="http://openweathermap.org/img/wn/${
                   forecastDay.weather[0].icon
                 }@2x.png" alt="clear" class="weather-bottom" id="icon-bottom" />
               </div>
-              <hr />
               <div class="temperature" id="currentTemperature">
                 <spann class="minimumTemp" id="minimumTemperature">${Math.round(
                   forecastDay.temp.min

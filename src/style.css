@@ -9,7 +9,7 @@ body {
   border: solid rgb(76, 76, 142);
   box-sizing: border-box;
   background: linear-gradient(359.3deg, rgb(197, 196, 252) 1.5%, rgba(187, 187, 187, 0) 60%);
-  max-width: 650px;
+  max-width: 700px;
   box-shadow: 5px 5px 2px 1px rgba(119, 119, 127, 0.2);
 }
 
@@ -23,7 +23,6 @@ form {
   border-style: solid;
   border-width: thin;
   border-color: rgb(76, 76, 142);
-
 }
 
 .btn-primary {
@@ -69,8 +68,7 @@ li {
 
 .current-time-place {
   margin-left: 15px;
-  margin-top: 100px;
-  margin-bottom: 0;
+  padding-top: 110px;
 }
 
 .location {
@@ -97,20 +95,20 @@ li {
 }
 
 .current-temperature {
-  margin-top: 15px;
-  margin-bottom: 0px;
+  padding-top: 0px;
+  text-align: end;
 }
 
 .weather-temperature img {
-  margin-top: 25px;
-  margin-right: 235px;
-  margin-bottom: -240px;
+  margin-top: 55px;
+  margin-bottom: -130px;
 }
 
 .weather-temperature strong {
   font-size: 9rem;
   color: rgb(43, 23, 110);
   line-height: 1;
+  padding-top: 115px;
 }
 
 .weather-temperature strong:hover {
@@ -134,10 +132,10 @@ li {
 }
 
 h5 {
-  text-align: right;
   font-size: 20px;
   margin-top: 10px;
-  margin-right: 15px
+  margin-right: 15px;
+  margin-left: -30px;
 }
 
 .thermal-sensation {
@@ -265,7 +263,61 @@ h4 {
 @media (max-width:576px) {
   form {
     margin-top: 10px;
-    margin-left: 15px;
-    max-width: 300px;
+    margin-left: 0px;
+    max-width: 400px;
+  }
+
+  .current-temperature {
+    text-align: center;
+  }
+
+  .weather-temperature strong {
+    font-size: 6rem;
+  }
+
+  .location {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .time {
+    text-align: center;
+  }
+
+  .current-time-place {
+    margin-left: 0;
+    padding: 10px 0 0 0;
+  }
+
+  h5 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .day-week {
+    font-size: 16px;
+  }
+
+  .indicator_weather_bottom {
+    font-size: 11px;
+  }
+
+  .fa-droplet.bottom-left {
+    font-size: 10px;
+  }
+
+  .fa-wind.bottom-right {
+    font-size: 10px;
+    text-align: left;
+    color: rgba(4, 84, 24, 0.244);
+  }
+
+  .card-body {
+    padding: 17px 2px;
   }
 }

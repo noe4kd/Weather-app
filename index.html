@@ -41,14 +41,13 @@
         <div class="col-sm-6">
           <div class="current-temperature">
             <div class="clearfix weather-temperature">
-              <img src=".." alt="clear" class="float-right" id="icon" />
-              <div class="float-right">
-                <strong id="current-temp"></strong>
-                <spann class="units">
-                </spann>
-              </div>
+              <img src=".." class="d-sm-block d-none" alt="clear" id="icon" />
+              <strong id="current-temp" class="current-temp"></strong>
+              <spann class="units">
+              </spann>
             </div>
-            <h5><i class="fa-solid fa-temperature-high heading"></i>
+
+            <h5 class="text-below-ct"><i class="fa-solid fa-temperature-high heading"></i>
               <spann class="thermal-sensation" id="currentThermalSensation"></spann>
               <i class="fa-solid fa-droplet heading"></i>
               <spann class="precipitation" id="currentHumidity"></spann>
