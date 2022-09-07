@@ -40,7 +40,7 @@ function displayForecast(response) {
           <div class="card">
             <div class="card-body">
               <h4 class="day-week" id="today">${formatDay(forecastDay.dt)}</h4>
-              <div class="indicator_weather_symbol d-sm-block d-none">
+              <div class="indicator_weather_symbol d-sm-inline d-none">
                 <img src="http://openweathermap.org/img/wn/${
                   forecastDay.weather[0].icon
                 }@2x.png" alt="clear" class="weather-bottom" id="icon-bottom" />
