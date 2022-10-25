@@ -3,14 +3,14 @@ body {
 }
 
 .weather-app {
-  padding: 3px 0px;
+  padding: 10px;
   margin: 30px auto;
   border-radius: 10px;
-  border: solid rgb(76, 76, 142);
+  border: double rgb(60, 60, 111);
   box-sizing: border-box;
-  background: linear-gradient(359.3deg, rgb(197, 196, 252) 1.5%, rgba(187, 187, 187, 0) 60%);
+  background: linear-gradient(359.8deg, rgb(183, 182, 237) 1.7%, rgba(187, 187, 187, 0) 60%);
   max-width: 700px;
-  box-shadow: 5px 5px 2px 1px rgba(119, 119, 127, 0.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 form {
@@ -73,6 +73,8 @@ li {
 
 .location {
   font-size: 25px;
+  text-shadow: rgb(69, 62, 76) 1.5px 1.4px 1px;
+  color: rgb(76, 76, 142);
 }
 
 .location:first-line {
