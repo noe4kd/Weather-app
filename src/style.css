@@ -326,4 +326,8 @@ h4 {
   .card-body {
     padding: 17px 2px;
   }
+
+  .greetingUser {
+    font-size: 10px;
+  }
 }
